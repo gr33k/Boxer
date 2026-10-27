@@ -53,6 +53,8 @@
     
     openPanel.accessoryView = self.view;
     openPanel.directoryURL = initialURL;
+	self.sampleGamesToggle.hidden = ([[NSBundle mainBundle] URLForResource: @"Sample Games" withExtension: nil] == nil);
+	self.sampleGamesToggle.state = NO;
     
     openPanel.prompt = NSLocalizedString(@"Select", @"Button label for Open panels when selecting a folder.");
     openPanel.message = NSLocalizedString(@"Select a folder in which to keep your DOS games:",
@@ -106,8 +108,8 @@
 	NSFileManager *manager = [NSFileManager defaultManager];
 	BOOL hasFiles = ([manager enumeratorAtPath: selection].nextObject != nil);
 	
-	//If the selected folder is empty, turn on the copy-sample-games checkbox; otherwise, clear it. 
-	self.sampleGamesToggle.state = !hasFiles;
+	//Only offer sample games when this build actually includes them.
+	self.sampleGamesToggle.state = !self.sampleGamesToggle.hidden && !hasFiles;
 }
 
 - (void) panel: (NSOpenPanel *)openPanel didChangeToDirectoryURL: (NSURL *)url

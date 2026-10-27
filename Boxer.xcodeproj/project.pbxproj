@@ -4045,7 +4045,6 @@
 				9FAE9B8B11F1D7CF000363F7 /* GameDefaults.plist in Resources */,
 				9F4199F81BD416E900A2D165 /* Shell.strings in Resources */,
 				9F4199E91BD416E400A2D165 /* LauncherHeading.xib in Resources */,
-				9F160DE21236952600F8768E /* Sample Games in Resources */,
 				9F70C19C129036C900A3627F /* Boxer.sdef in Resources */,
 				9FFC2AC012A19CCC008C2B3B /* Sample Game Icons in Resources */,
 				9FCC303C13670F680013F083 /* KeyboardLayouts.plist in Resources */,

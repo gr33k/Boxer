@@ -57,10 +57,10 @@
                                     <action selector="orderFrontPreferencesPanel:" target="401" id="1839"/>
                                 </connections>
                             </menuItem>
-                            <menuItem title="Check for Updates…" id="1856">
+                            <menuItem title="Boxer Releases on the Web…" id="1856">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
-                                    <action selector="checkForUpdates:" target="1855" id="1857"/>
+                                    <action selector="showWebsite:" target="-1" id="1857"/>
                                 </connections>
                             </menuItem>
                             <menuItem isSeparatorItem="YES" id="1124"/>
@@ -952,7 +952,6 @@
                 <binding destination="401" name="contentObject" keyPath="currentSession" id="2209"/>
             </connections>
         </objectController>
-        <customObject id="1855" userLabel="Sparkle Updater" customClass="SUUpdater"/>
         <customObject id="2130" customClass="BXJoystickController"/>
         <menu id="2132" userLabel="Dock Menu">
             <items>

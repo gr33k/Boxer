@@ -1,5 +1,30 @@
 ![Boxer](http://boxerapp.com/static/images/gloves_96.png)
 
+#### thec0de Boxer 4.2.0
+
+This continuation builds on Alun Bestor's Boxer and MaddTheSane's maintained
+fork. See [the 4.2 release notes](./RELEASE_NOTES_4.2.md) for the changes,
+limitations, credits, and distribution details. The 4.2 download contains no
+games or gameboxes; bring your own DOS software. Its app identity remains
+`net.washboardabs.boxer` and the release build targets macOS 12 or newer on
+Intel and Apple Silicon. Older Boxer downloads remain available separately.
+
+The build instructions and OS requirements below describe earlier Boxer
+generations. To reproduce the tested 4.2 build, initialize submodules
+recursively, use Xcode 27.1 with its Metal Toolchain and CMake, and run:
+
+```bash
+CMAKE='/opt/homebrew/bin/cmake -DCMAKE_POLICY_VERSION_MINIMUM=3.5' \
+NCPUS=2 MAKEFLAGS=-e xcodebuild -workspace Boxer.xcworkspace \
+  -scheme 'Boxer CI' -configuration Release \
+  -destination 'generic/platform=macOS' -jobs 2 \
+  MACOSX_DEPLOYMENT_TARGET=12.0 CODE_SIGNING_ALLOWED=NO \
+  COMPILER_INDEX_STORE_ENABLE=NO build
+```
+
+This produces an unsigned build. An ad-hoc signature can verify archive
+integrity locally, but it is not a Developer ID signature or notarization.
+
 #### Some notes on building Boxer
 
 The Boxer Xcode project is designed to be a painless one-click build. Here's a quick rundown of how it's set up:

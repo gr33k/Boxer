@@ -176,15 +176,9 @@
 	<key>ReplacementDocsURL</key>
 	<string>http://www.replacementdocs.com/</string>
 	<key>SUEnableAutomaticChecks</key>
-	<true/>
+	<false/>
 	<key>SUEnableSystemProfiling</key>
 	<false/>
-	<key>SUFeedURL</key>
-	<string>https://updates.boxerapp.com/appcast-dev</string>
-	<key>SUPublicDSAKeyFile</key>
-	<string>dsa_pub.pem</string>
-	<key>SUScheduledCheckInterval</key>
-	<integer>86400</integer>
 	<key>UTExportedTypeDeclarations</key>
 	<array>
 		<dict>
@@ -463,6 +457,6 @@
 		</dict>
 	</array>
 	<key>WebsiteURL</key>
-	<string>http://boxerapp.com/</string>
+	<string>https://boxer.thec0de.com/</string>
 </dict>
 </plist>
