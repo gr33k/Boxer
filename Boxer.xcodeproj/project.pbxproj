@@ -5232,14 +5232,14 @@
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = NO;
-				CODE_SIGN_IDENTITY = "Developer ID Application: David Seto (GHTQCRGWTR)";
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_SHORT_VERSION_STRING = 1.0;
 				CURRENT_PROJECT_VERSION = 20210308;
 				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=macosx*]" = GHTQCRGWTR;
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Frameworks\"",
@@ -5267,7 +5267,7 @@
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MARKETING_VERSION = "2.0.0-alpha";
 				OTHER_CFLAGS = "-mstackrealign";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dtseto.boxer-standalone";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.washboardabs.boxer-standalone";
 				PRODUCT_NAME = "Boxer Standalone";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -5284,14 +5284,14 @@
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = NO;
-				CODE_SIGN_IDENTITY = "Developer ID Application: David Seto (GHTQCRGWTR)";
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_SHORT_VERSION_STRING = 1.0;
 				CURRENT_PROJECT_VERSION = 20210308;
 				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=macosx*]" = GHTQCRGWTR;
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Frameworks\"",
@@ -5317,7 +5317,7 @@
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MARKETING_VERSION = "2.0.0-alpha";
 				OTHER_CFLAGS = "-mstackrealign";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dtseto.boxer-standalone";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.washboardabs.boxer-standalone";
 				PRODUCT_NAME = "Boxer Standalone";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -5337,13 +5337,13 @@
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
-				CODE_SIGN_IDENTITY = "Developer ID Application: David Seto (GHTQCRGWTR)";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 20191017;
 				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=macosx*]" = GHTQCRGWTR;
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = "";
 				ENABLE_HARDENED_RUNTIME = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -5362,7 +5362,7 @@
 					"$(inherited)",
 				);
 				MARKETING_VERSION = 1.2.4;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dtseto.boxer-standalone-bundler";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.washboardabs.boxer-standalone-bundler";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -5380,13 +5380,13 @@
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
-				CODE_SIGN_IDENTITY = "Developer ID Application: David Seto (GHTQCRGWTR)";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				CURRENT_PROJECT_VERSION = 20191017;
 				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=macosx*]" = GHTQCRGWTR;
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -5399,7 +5399,7 @@
 					"$(inherited)",
 				);
 				MARKETING_VERSION = 1.2.4;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dtseto.boxer-standalone-bundler";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.washboardabs.boxer-standalone-bundler";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -5436,7 +5436,7 @@
 				CODE_SIGN_IDENTITY = "Developer ID Application";
 				CURRENT_PROJECT_VERSION = 20120907.1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = GHTQCRGWTR;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -5471,14 +5471,14 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = NO;
 				CODE_SIGN_ENTITLEMENTS = Boxer/Boxer.entitlements;
-				CODE_SIGN_IDENTITY = "Developer ID Application: David Seto (GHTQCRGWTR)";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Developer ID Application: David Seto (GHTQCRGWTR)";
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = "2.0.0-alpha+20210308";
+				CURRENT_PROJECT_VERSION = 42001;
 				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=macosx*]" = GHTQCRGWTR;
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = "";
 				ENABLE_HARDENED_RUNTIME = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -5505,10 +5505,10 @@
 				"LD_NO_PIE[arch=arm64]" = NO;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				MARKETING_VERSION = "2.0.2-alpha";
+				MARKETING_VERSION = 4.2.0;
 				MTL_LANGUAGE_REVISION = UseDeploymentTarget;
 				OTHER_CFLAGS = "-mstackrealign";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dtseto.boxer;
+				PRODUCT_BUNDLE_IDENTIFIER = net.washboardabs.boxer;
 				PRODUCT_NAME = Boxer;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
@@ -5528,14 +5528,14 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = NO;
 				CODE_SIGN_ENTITLEMENTS = Boxer/Boxer.entitlements;
-				CODE_SIGN_IDENTITY = "Developer ID Application: David Seto (GHTQCRGWTR)";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Developer ID Application: David Seto (GHTQCRGWTR)";
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = "2.0.0-alpha+20210308";
+				CURRENT_PROJECT_VERSION = 42001;
 				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=macosx*]" = GHTQCRGWTR;
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -5562,10 +5562,10 @@
 				"LD_NO_PIE[arch=arm64]" = NO;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				MARKETING_VERSION = "2.0.2-alpha";
+				MARKETING_VERSION = 4.2.0;
 				MTL_LANGUAGE_REVISION = UseDeploymentTarget;
 				OTHER_CFLAGS = "-mstackrealign";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dtseto.boxer;
+				PRODUCT_BUNDLE_IDENTIFIER = net.washboardabs.boxer;
 				PRODUCT_NAME = Boxer;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
@@ -5605,7 +5605,7 @@
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 20120907.1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = GHTQCRGWTR;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -5622,7 +5622,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				MACOSX_DEPLOYMENT_TARGET = 10.14.4;
-				PRODUCT_BUNDLE_IDENTIFIER = com.dtseto.boxer;
+				PRODUCT_BUNDLE_IDENTIFIER = net.washboardabs.boxer;
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_EMIT_LOC_STRINGS = YES;

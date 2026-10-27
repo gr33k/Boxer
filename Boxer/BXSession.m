@@ -371,7 +371,7 @@ NSString * const BXGameImportedNotificationType     = @"BXGameImported";
             //Check if the user was running a program last time, and restore that if available.
 		    NSString *previousPath = [self.gameSettings objectForKey: BXGameboxSettingsLastProgramPathKey];
             NSURL *previousURL = nil;
-            if (previousPath && !previousPath.isAbsolutePath)
+            if (previousPath.length > 0)
             {
                 if (previousPath.isAbsolutePath)
                 {
@@ -1570,6 +1570,9 @@ NSString * const BXGameImportedNotificationType     = @"BXGameImported";
     
     //Let the display sleep while we're at the shell
     [self _syncSuppressesDisplaySleep];
+
+    //The initial shell and an idle shell can both accept new URLs.
+    self.canOpenURLs = !self.emulator.isRunningActiveProcess;
     
     //If this was the last program in the stack, then clean up a bunch of our state
     //and switch back to the launcher panel if appropriate.
