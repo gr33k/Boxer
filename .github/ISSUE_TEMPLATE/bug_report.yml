@@ -12,7 +12,7 @@ body:
     attributes:
       label: Boxer version and build
       description: Find these in Boxer > About Boxer.
-      placeholder: "4.2.0 Beta 2, build 42002"
+      placeholder: "4.2.0 Beta, build 42002"
     validations:
       required: true
   - type: input

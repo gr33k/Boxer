@@ -38,8 +38,7 @@ is not a compatibility guarantee. Older Boxer builds remain available at
   for modern macOS while keeping the macOS 12 path.
 - Modernized the Xcode build workflow for the current toolchain.
 
-See the [Beta 2 notes](./RELEASE_NOTES_4.2_BETA2.md) and
-[Beta 1 notes](./RELEASE_NOTES_4.2.md) for details and known limits. This is a
+See the [4.2.0 beta notes](./RELEASE_NOTES_4.2_BETA.md) for details and known limits. This is a
 maintenance beta, **not** a DOSBox Staging engine rebase or Boxer 5.0.
 
 ### Build from source
