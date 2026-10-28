@@ -518,12 +518,16 @@ enum {
         //Rephrase the hotkey capture help based on what version of OS X we're running on,
         //as the global accessibility controls changed to per-app controls in 10.9.
         NSString *accessibilityPrefsName = [BXAppController localizedSystemAccessibilityPreferencesName];
-        NSString *hotkeyButtonLabelFormat = NSLocalizedString(@"Open %1$@ Preferences", @"Title of button in Keyboard Preferences pane to open OS X's accessibility controls. %1$@ is the localized name of the appropriate System Preferences pane.");
+        NSString *hotkeyButtonLabelFormat = ([NSProcessInfo processInfo].operatingSystemVersion.majorVersion >= 13)
+            ? NSLocalizedString(@"Open %1$@ Settings", @"Title of button to open macOS Accessibility privacy settings.")
+            : NSLocalizedString(@"Open %1$@ Preferences", @"Title of button in Keyboard Preferences pane to open OS X's accessibility controls. %1$@ is the localized name of the appropriate System Preferences pane.");
         
         NSString *helpFormat;
         if ([BXAppController hasPerAppAccessibilityControls])
         {
-            helpFormat = NSLocalizedString(@"This feature requires Boxer to be given accessibility control in %1$@ Preferences.", @"Explanatory message shown in Keyboard Preferences if Boxer is not able to install its hotkey capture event tap on OS X 10.9 and up. %1$@ is the localized name of the Security & Privacy preferences pane.");
+            helpFormat = ([NSProcessInfo processInfo].operatingSystemVersion.majorVersion >= 13)
+                ? NSLocalizedString(@"This feature requires Boxer to be given accessibility control in %1$@ Settings.", @"Explanatory message shown in Keyboard Preferences on modern macOS.")
+                : NSLocalizedString(@"This feature requires Boxer to be given accessibility control in %1$@ Preferences.", @"Explanatory message shown in Keyboard Preferences if Boxer is not able to install its hotkey capture event tap on OS X 10.9 and up. %1$@ is the localized name of the Security & Privacy preferences pane.");
         }
         else
         {

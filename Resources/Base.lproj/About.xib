@@ -71,11 +71,12 @@ into DOS emulation.</string>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" sendsActionOnEndEditing="YES" id="56">
                                     <font key="font" metaFont="system"/>
-                                    <string key="title">Boxer is designed by
-Alun Bestor &amp; released under the GNU Public License.
+                                    <string key="title">Created by Alun Bestor.
+Modern fork by MaddTheSane.
+Continued by thec0de.com.
 
-Boxer is based on DOSBox 0.74, which is 
-© 2002–2010 by the DOSBox Team.</string>
+Powered by the DOSBox Team.
+Released under GNU GPL v2.</string>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>

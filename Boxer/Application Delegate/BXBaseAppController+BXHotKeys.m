@@ -280,12 +280,18 @@
 
 + (NSString *) localizedSystemAccessibilityPreferencesName
 {
+    if ([NSProcessInfo processInfo].operatingSystemVersion.majorVersion >= 13)
+        return NSLocalizedString(@"Privacy & Security", @"Name of the macOS settings pane containing Accessibility permissions.");
+
     NSURL *prefsURL = [self hasPerAppAccessibilityControls] ? self._securityPreferencesURL : self._accessibilityPreferencesURL;
     
     NSBundle *prefs = [NSBundle bundleWithURL: prefsURL];
     NSString *prefsName = [prefs objectForInfoDictionaryKey: @"CFBundleName"];
     
-    return prefsName;
+    if (prefsName.length)
+        return prefsName;
+
+    return [self hasPerAppAccessibilityControls] ? @"Security & Privacy" : @"Accessibility";
 }
 
 - (IBAction) showHotkeyWarningIfUnavailable: (id)sender
@@ -389,6 +395,12 @@
 
 - (IBAction) showSystemAccessibilityControls: (id)sender
 {
+    if ([NSProcessInfo processInfo].operatingSystemVersion.majorVersion >= 13)
+    {
+        NSURL *settingsURL = [NSURL URLWithString: @"x-apple.systempreferences:com.apple.settings.PrivacySecurity.extension?Privacy_Accessibility"];
+        if ([[NSWorkspace sharedWorkspace] openURL: settingsURL]) return;
+    }
+
     if ([self.class hasPerAppAccessibilityControls])
         [self _showPerAppAccessibilityControls];
     else

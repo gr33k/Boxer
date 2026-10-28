@@ -13,9 +13,6 @@ release, not the proposed DOSBox Staging 0.83 migration or a Boxer 5.0 rewrite.
   close/reopen path was tested; every historical saved-path variant was not.
 - Set version 4.2.0 (build 42001) and build a universal Intel/Apple Silicon app
   with a macOS 12.0 deployment target.
-- Remove bundled sample games from the new app. The games-folder chooser no
-  longer offers to copy samples when none are present. Your own gameboxes and
-  DOS files are never included in this download.
 - Disable the inherited automatic update check against the upstream development
   feed. The app's Releases menu opens thec0de Boxer website instead.
 - Modernize the CI build configuration for current Xcode without changing the
@@ -31,8 +28,7 @@ macOS 12-25, and the owner's M3 Pro on macOS 26.7.1 remain untested. A release
 build targets macOS 12+, but that target alone does not prove runtime support
 on every older macOS version.
 
-The original 4.1 Beta and older generation downloads remain separate. The
-original Boxer 1.4 archive is unchanged and is not part of this 4.2 binary.
+The original 4.1 Beta and older generation downloads remain separate.
 
 ## Source and credits
 

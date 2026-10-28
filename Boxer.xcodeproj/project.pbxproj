@@ -4047,6 +4047,7 @@
 				9F4199E91BD416E400A2D165 /* LauncherHeading.xib in Resources */,
 				9F70C19C129036C900A3627F /* Boxer.sdef in Resources */,
 				9FFC2AC012A19CCC008C2B3B /* Sample Game Icons in Resources */,
+				9F160DE21236952600F8768E /* Sample Games in Resources */,
 				9FCC303C13670F680013F083 /* KeyboardLayouts.plist in Resources */,
 				9F4199EA1BD416E400A2D165 /* LauncherFavorite.xib in Resources */,
 				9F4199ED1BD416E400A2D165 /* Inspector.xib in Resources */,
@@ -5464,7 +5465,7 @@
 		9FE76B341139A11A005EF7B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = boxer;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "boxer-thec0de";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -5475,7 +5476,7 @@
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 42001;
+				CURRENT_PROJECT_VERSION = 42002;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=macosx*]" = "";
 				ENABLE_HARDENED_RUNTIME = NO;
@@ -5521,7 +5522,7 @@
 		C01FCF4C08A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = boxer;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "boxer-thec0de";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -5532,7 +5533,7 @@
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 42001;
+				CURRENT_PROJECT_VERSION = 42002;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=macosx*]" = "";
 				ENABLE_HARDENED_RUNTIME = YES;

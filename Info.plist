@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>BugReportURL</key>
-	<string>http://boxerapp.com/report-an-issue</string>
+	<string>https://github.com/gr33k/Boxer/issues/new?template=bug_report.yml</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDocumentTypes</key>

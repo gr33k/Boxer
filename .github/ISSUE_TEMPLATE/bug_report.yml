@@ -1,0 +1,62 @@
+name: Bug report
+description: Report a problem with thec0de Boxer on macOS
+title: "[Bug] "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve Boxer. Check existing issues first. Please do not upload games, ROMs, serial numbers, account details, or unreviewed logs.
+  - type: input
+    id: boxer-version
+    attributes:
+      label: Boxer version and build
+      description: Find these in Boxer > About Boxer.
+      placeholder: "4.2.0 Beta 2, build 42002"
+    validations:
+      required: true
+  - type: input
+    id: macos-version
+    attributes:
+      label: macOS version
+      placeholder: "macOS 26.6.2"
+    validations:
+      required: true
+  - type: input
+    id: mac-model
+    attributes:
+      label: Mac model and chip
+      placeholder: "MacBook Pro, Apple M3 Pro (or Intel processor)"
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Include the DOS program or game name only if relevant, without uploading its files.
+      placeholder: |
+        1. Open Boxer
+        2. Open a gamebox
+        3. ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Diagnostics, if available
+      description: Boxer may save a Markdown error report in ~/Library/Application Support/Boxer/Crash Dumps/. Review it for private paths or personal information before attaching or pasting it.
+      placeholder: "Paste a reviewed excerpt or describe any error message."
+    validations:
+      required: false

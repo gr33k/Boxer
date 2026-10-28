@@ -1,19 +1,55 @@
-![Boxer](http://boxerapp.com/static/images/gloves_96.png)
+<p align="center"><img src=".github/assets/boxer-thec0de-beta.png" width="180" alt="Two red Boxer gloves with a small green Pi on each cuff"></p>
 
-#### thec0de Boxer 4.2.0
+# Boxer, carried forward
 
-This continuation builds on Alun Bestor's Boxer and MaddTheSane's maintained
-fork. See [the 4.2 release notes](./RELEASE_NOTES_4.2.md) for the changes,
-limitations, credits, and distribution details. The 4.2 download contains no
-games or gameboxes; bring your own DOS software. Its app identity remains
-`net.washboardabs.boxer` and the release build targets macOS 12 or newer on
-Intel and Apple Silicon. Older Boxer downloads remain available separately.
+DOS games on a Mac should still feel like Mac apps. Boxer wraps DOS software in
+click-to-play gameboxes, with a Finder-friendly library and sensible defaults
+for sound, graphics, and controls. This is the **thec0de.com continuation** of
+Boxer, built on [MaddTheSane's fork](https://github.com/MaddTheSane/Boxer) of
+[Alun Bestor's original](https://github.com/alunbestor/Boxer).
 
-The build instructions and OS requirements below describe earlier Boxer
-generations. To reproduce the tested 4.2 build, initialize submodules
-recursively, use Xcode 27.1 with its Metal Toolchain and CMake, and run:
+## 4.2.0 Beta
+
+The current beta is a universal Intel and Apple Silicon build targeting
+macOS 12 or newer. It includes the original Epic Pinball, Ultima Underworld,
+and X-COM demo gameboxes, with an optional first-run copy into your games
+folder. You can import your own DOS software separately.
+
+This beta is **ad-hoc signed, not Developer ID signed or notarized**. macOS may
+require manual approval on first launch. Intel Macs, macOS 12-25, and the
+owner's M3 Pro have not yet received hardware qualification; the target alone
+is not a compatibility guarantee. Older Boxer builds remain available at
+[boxer.thec0de.com](https://boxer.thec0de.com/).
+
+### What changed
+
+- Restored Boxer's established `net.washboardabs.boxer` app identity.
+- Applied the saved-gamebox-path and shell-readiness fix from upstream
+  [pull request #82](https://github.com/MaddTheSane/Boxer/pull/82).
+- Kept the original sample demos and bundled DOS Toolkit, including Gravis
+  Ultrasound patches. Existing MT-32 support remains available.
+- Added a fork-specific two-glove app icon; the upstream icon files remain
+  untouched for historical builds.
+- Stopped checks against the old upstream development update feed; the in-app
+  Releases link opens thec0de Boxer site instead.
+- Updated Help > About to credit Alun Bestor, MaddTheSane, thec0de.com, and
+  the DOSBox team. Report a Bug opens this fork's issue form.
+- Fixed the Keyboard Preferences Accessibility instructions and settings link
+  for modern macOS while keeping the macOS 12 path.
+- Modernized the Xcode build workflow for the current toolchain.
+
+See the [Beta 2 notes](./RELEASE_NOTES_4.2_BETA2.md) and
+[Beta 1 notes](./RELEASE_NOTES_4.2.md) for details and known limits. This is a
+maintenance beta, **not** a DOSBox Staging engine rebase or Boxer 5.0.
+
+### Build from source
+
+Initialize the included dependency submodules and use Xcode 27.1 with its
+Metal Toolchain and CMake. The command below reproduces the unsigned Release
+build used for this beta on Apple Silicon; adjust the CMake path if needed.
 
 ```bash
+git submodule update --init --recursive
 CMAKE='/opt/homebrew/bin/cmake -DCMAKE_POLICY_VERSION_MINIMUM=3.5' \
 NCPUS=2 MAKEFLAGS=-e xcodebuild -workspace Boxer.xcworkspace \
   -scheme 'Boxer CI' -configuration Release \
@@ -22,50 +58,26 @@ NCPUS=2 MAKEFLAGS=-e xcodebuild -workspace Boxer.xcworkspace \
   COMPILER_INDEX_STORE_ENABLE=NO build
 ```
 
-This produces an unsigned build. An ad-hoc signature can verify archive
-integrity locally, but it is not a Developer ID signature or notarization.
+The repository also retains the historical Boxer Standalone and Bundler
+targets. Their older documented OS minimums are not a promise that this new
+4.2 beta runs on those systems.
 
-#### Some notes on building Boxer
+### Bugs and contributions
 
-The Boxer Xcode project is designed to be a painless one-click build. Here's a quick rundown of how it's set up:
+Please [open a bug report](https://github.com/gr33k/Boxer/issues/new?template=bug_report.yml)
+with your Boxer build, macOS version, Mac model, and steps to reproduce. If
+Boxer saved a report in `~/Library/Application Support/Boxer/Crash Dumps/`,
+review it for personal paths before sharing it. Please do not upload games,
+ROMs, serial numbers, or private files. Pull requests with focused fixes and
+reproducible tests are welcome.
 
-#### Build requirements
+## Credits and license
 
-To build the Boxer project you will need macOS 10.14 or higher and XCode 11.3 or higher.
+Alun Bestor created Boxer. MaddTheSane maintained and modernized the fork
+that this continuation builds on. The DOSBox and DOSBox Staging teams built
+the emulator beneath it; many other contributors made this project possible.
+Our 4.2 beta work is credited to thec0de.com without erasing that lineage.
 
-All necessary frameworks and other dependencies are included in the Boxer repo, or as git submodules, so the project itself is all you'll need.
-
-After cloning, run:
-
-```bash
-git submodule update --init --recursive
-```
-
-#### Build Targets
-
-The Boxer project has three targets:
-
-- "Boxer": the standard Boxer emulator you know and love, as seen on http://boxerapp.com. This is almost certainly the one you'll want to use.
-
-- "Boxer Standalone": a cut-down version of Boxer that wraps up a gamebox into a single unified app. Game importing and settings UIs have been stripped out of this version, and it will only launch the gamebox that bundled inside it. This target is not meant to be used on its own: instead it's a build component for…
-
-- "Boxer Bundler": a graphical tool for converting gameboxes into standalone apps using its own self-contained copy of Boxer Standalone.
-
-#### Build Configurations
-
-The Boxer target has 2 build configurations: Release and Debug. Both of them compile fully optimized 64-bit binaries using the LLVM compiler. Debug works almost exactly the same as Release but turns on console debug messages and additional error-checking.
-
-#### App requirements
-
-Boxer and Boxer Standalone both run on macOS 10.14.4 and above, while Boxer Bundler runs on OS X 10.8 and above.
-
-OSX 10.5 and PowerPC support has been removed from the Boxer master branch: if you need these, use the older "leopard_legacy" maintenance branch from http://github.com/alunbestor/Boxer/tree/leopard_legacy/.
-
-#### Having trouble?
-
-If you have any problems building the Boxer project, or questions about Boxer's code, please get in touch with me at abestor@boxerapp.com and I'll help out as best I can.
-
-#### License
-
-The project is licensed using [GPLv2](./LICENSE). Originally developed
-by Alun Bestor and other contributors.
+Boxer is licensed under [GPLv2](./LICENSE). Keep the license and notices with
+redistributions. The corresponding source for each published beta is linked
+from its release page.
